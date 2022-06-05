@@ -1,0 +1,5 @@
+f(i)
+@requires i:int
+@ensures true
+{ i=2;
+}

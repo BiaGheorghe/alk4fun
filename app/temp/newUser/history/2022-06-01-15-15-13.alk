@@ -1,0 +1,7 @@
+f(i)
+//@requires i:int
+//@ensures true
+{ choose x from {1..i};
+return x;
+}
+print f(5);
