@@ -28,10 +28,10 @@ session_start();
             unset($_SESSION['projectPath']);
             header('location:ideToggle.php');
         }else{
-            header('location:slideLogin.html');
+            header('location:slideLogin.php');
         }
     }else{
-        header('location:slideLogin.html');
+        header('location:slideLogin.php');
     }
 
 
