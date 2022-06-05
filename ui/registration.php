@@ -1,6 +1,5 @@
 <?php
     session_start();
-    //header('location:slideLogin.html');
     $con = mysqli_connect('localhost', 'root', 'Parolaptmysql2.0');
 
     mysqli_select_db($con, 'sessionpractical');
@@ -16,14 +15,14 @@
     $num = mysqli_num_rows($result);
 
 if($num == 1){
-    echo "<script>alert('User with the same username email combination already exists');window.location.href='slideLogin.html';</script>";
+    echo "<script>alert('User with the same username email combination already exists');window.location.href='slideLogin.php';</script>";
 
 }else{
     $qy = "insert into registration(name, email, password) values('$name', '$email', '$secure_pass') ";
     mysqli_query($con, $qy);
     mkdir ("../app/temp/$name", "0777");
     mkdir ("../app/temp/$name/input_uploads", "0777");
-    header("location:slideLogin.html");
+    header("location:slideLogin.php");
 }
 
 ?>
