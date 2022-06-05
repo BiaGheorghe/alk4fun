@@ -1,2 +1,2 @@
 <?php
-header('location:slideLogin.html');
+header('location:slideLogin.php');
